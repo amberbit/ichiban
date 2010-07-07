@@ -12,6 +12,8 @@ Quizes::Application.routes.draw do |map|
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+  match "admin" => "admin/dashboard#index"
+
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

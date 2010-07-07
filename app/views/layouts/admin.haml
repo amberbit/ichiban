@@ -1,0 +1,29 @@
+!!! 5
+%html
+  %head
+    %meta{ :name => "csrf-token", :content => form_authenticity_token }
+    %title Ichiban CMS Admin Panel
+    = stylesheet_link_tag "/stylesheets/reset.css"
+    = stylesheet_link_tag "/stylesheets/admin.css"
+
+    %script{ :type => "text/javascript", :src => "http://www.google.com/jsapi" }
+    %script{ :type => "text/javascript" }
+      google.load("jquery", "1.4.2");
+
+    = javascript_include_tag "rails"
+    = javascript_include_tag "admin"
+
+  %body
+    %header
+      %h1
+        Ichiban CMS Admin
+      = render partial: "layouts/admin/flash_messages"
+    = yield
+    #wrapper
+      %nav
+        %ul
+          %li= link_to t("admin.dashboard"), admin_path
+          %li= link_to t("admin.sign_out"), destroy_user_session_path
+      #content
+
+

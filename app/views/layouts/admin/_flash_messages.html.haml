@@ -1,0 +1,9 @@
+- [:error, :warning].each do |what|
+  - if flash[what]
+    %h5{ :class => "flash-message flash-error-message" }
+      = flash[what]
+
+- [:notice, :info].each do |what|
+  - if flash[what]
+    %h5{ :class => "flash-message flash-notice-message" }
+      = flash[what]
