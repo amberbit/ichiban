@@ -3,3 +3,8 @@
     %th= t("activemodel.attributes.user.picture")
     %th= t("attributes.email")
     %th= t("attributes.name")
+  - @users.each do |user|
+    %tr
+      %td= image_tag user.picture.url(:small)
+      %td= user.email
+      %td= user.name
