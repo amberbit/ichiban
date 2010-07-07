@@ -14,6 +14,10 @@ Quizes::Application.routes.draw do |map|
 
   match "admin" => "admin/dashboard#index"
 
+  namespace :admin do
+    resources :users
+  end
+
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

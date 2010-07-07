@@ -7,8 +7,8 @@ class Admin::BaseController < ApplicationController
   protected
   def authenticate_admin!
     unless current_user.admin?
-      flash[:notice] = t("admin.administrator_required")
-      redirect_to :back
+      flash[:notice] = t("admin.admin_required")
+      redirect_to admin_path
     end
   end
 end
