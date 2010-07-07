@@ -3,8 +3,8 @@
   %head
     %meta{ :name => "csrf-token", :content => form_authenticity_token }
     %title Ichiban CMS Admin Panel
-    = stylesheet_link_tag "/stylesheets/reset.css"
-    = stylesheet_link_tag "/stylesheets/admin.css"
+    = stylesheet_link_tag "reset"
+    = stylesheet_link_tag "admin"
 
     %script{ :type => "text/javascript", :src => "http://www.google.com/jsapi" }
     %script{ :type => "text/javascript" }
@@ -15,15 +15,23 @@
 
   %body
     %header
-      %h1
-        Ichiban CMS Admin
       = render partial: "layouts/admin/flash_messages"
-    = yield
+      #amberbit_link
+        = link_to image_tag("amberbit.png"), "http://amberbit.com"
+      %h1
+        = link_to "Ichiban CMS Admin", admin_path
     #wrapper
-      %nav
-        %ul
-          %li= link_to t("admin.dashboard"), admin_path
-          %li= link_to t("admin.sign_out"), destroy_user_session_path
+      %aside
+        %nav
+          %ul
+            %li= link_to t("admin.dashboard"), admin_path
+            - if current_user.admin?
+              %li= link_to t("admin.users"), admin_users_path
+            %li= link_to t("admin.sign_out"), destroy_user_session_path
       #content
+        = yield
+    #footer
+      = raw "2010 &copy;"
+      = link_to "AmberBit", "http://amberbit.com"
 
 

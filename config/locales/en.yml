@@ -3,6 +3,16 @@ en:
     admin_required: "Administrator rights required to access this area"
     sign_out: "Sign out"
     dashboard: "Dashboard"
+    users: "Users"
+  activemodel:
+    models:
+      user: "User"
+    attributes:
+      user:
+        picture: "Avatar"
+  attributes:
+    email: "Email"
+    name: "Name"
   errors:
     messages:
       not_found: "not found"

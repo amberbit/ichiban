@@ -10,10 +10,14 @@ module HelperMethods
     click_button "Sign in"
   end
 
-  def when_user_exists(email="john@doe.com")
+  def when_user_exists(email="john@doe.com", is_admin = false)
     u = User.find(:first, conditions: {email: email})
     u = User.create( email: email, name: "John Doe", password: "testtest",
                      picture: File.new("#{Rails.root}/spec/fixtures/picture.jpg") )
+    if is_admin
+      u.admin = true
+      u.save
+    end
     u
   end
   

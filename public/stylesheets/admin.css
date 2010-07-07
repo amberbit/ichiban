@@ -1,0 +1,53 @@
+body {
+  background-color: #aa0000;
+  padding: 10px;
+  font-size: 12px; }
+
+a, a:visited, a:hover {
+  color: #aa0000; }
+
+a:hover {
+  text-decoration: underline; }
+
+header {
+  width: 960px; }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: -6px;
+    text-shadow: -2px 2px 2px #888888; }
+    header h1 a, header h1 a:visited, header h1 a:hover {
+      color: white;
+      text-decoration: none; }
+  header #amberbit_link {
+    float: right; }
+    header #amberbit_link a {
+      position: relative;
+      bottom: -15px; }
+
+#wrapper {
+  display: table;
+  width: 960px;
+  background-color: #fefefe; }
+  #wrapper aside {
+    display: table-cell;
+    width: 150px;
+    padding: 5px; }
+    #wrapper aside nav ul, #wrapper aside nav li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    #wrapper aside nav a {
+      display: block;
+      padding: 5px;
+      border: 1px solid white;
+      margin-bottom: 1px; }
+    #wrapper aside nav a:hover {
+      background-color: #ee8888;
+      border: 1px solid #aa0000; }
+  #wrapper #content {
+    display: table-cell;
+    padding: 10px; }
+
+#footer, #footer a, #footer a:visited, #footer a:hover {
+  color: white;
+  text-decoration: none; }
