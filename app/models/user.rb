@@ -2,6 +2,7 @@ require 'carrierwave/orm/mongoid'
 
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :name, type: String
   field :admin, type: Boolean, default: false
   attr_protected :admin
@@ -14,6 +15,11 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :picture, PictureUploader
+  has_many_related :articles
 
+  def destroy
+    articles.each { |a| a.destroy }
+    super
+  end
 
 end

@@ -41,3 +41,13 @@ RSpec.configure do |config|
   # instead of true.
   #config.use_transactional_fixtures = true
 end
+
+
+def valid_user_attributes
+  { name: "John Doe", email: "john@doe.com", password: "asdf1234",
+    picture: File.open("#{Rails.root}/spec/fixtures/picture.jpg", "r")}
+end
+
+def valid_article_attributes
+  {user: User.first, title: "Some article", body: "Some body", slug: "some-article"}
+end

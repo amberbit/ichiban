@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe User do
 
-  def valid_user_attributes
-    { name: "John Doe", email: "john@doe.com", password: "asdf1234",
-      picture: File.open("#{Rails.root}/spec/fixtures/picture.jpg", "r")}
-  end
-
   it "should be created when valid attributes passed" do
     u = User.new valid_user_attributes
 
