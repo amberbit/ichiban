@@ -31,7 +31,7 @@ RSpec.configure do |config|
   config.mock_with :rspec
 
   config.before(:each) do
-#    Mongoid.database.collections.each {|col| col.drop }
+    Mongoid.database.collections.each {|col| begin col.drop; rescue; end }
   end
 
   #config.fixture_path = "#{::Rails.root}/spec/fixtures"
