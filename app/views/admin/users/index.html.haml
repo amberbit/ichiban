@@ -3,10 +3,14 @@
     %th= t("activemodel.attributes.user.picture")
     %th= t("attributes.email")
     %th= t("attributes.name")
+    %th
   - @users.each do |user|
     %tr
       %td= image_tag user.picture.url(:small), width: "20px", height: "20px"
       %td= user.email
       %td= user.name
-
-= link_to t("admin.new_user"), new_admin_user_path
+      %td
+        = link_to t("edit"), [:edit, :admin, user]
+        - unless current_user == user
+          = link_to t("delete"), [:admin, user], method: "delete"
+= link_to t("admin.user.new"), [:new, :admin, :user]

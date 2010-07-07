@@ -1,13 +1,19 @@
 en:
   submit: Submit
+  edit: Edit
+  cancel: Cancel
+  delete: Delete
   admin:
     admin_required: "Administrator rights required to access this area"
     sign_out: "Sign out"
     dashboard: "Dashboard"
     users: "Users"
-    new_user: "New user"
     user:
       cannot_create: "Could not create a user"
+      cannot_update: "Could not update a user"
+      deleted: "User was removed"
+      new: "New user"
+      edit: "Edit user"
   activemodel:
     models:
       user: "User"
@@ -17,6 +23,7 @@ en:
         name: "Name"
         email: "Email"
         password: "Password"
+        admin: Administrator?
   attributes:
     email: "Email"
     name: "Name"

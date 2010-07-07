@@ -14,4 +14,6 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :picture, PictureUploader
+
+
 end
