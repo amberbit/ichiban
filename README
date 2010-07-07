@@ -1,0 +1,18 @@
+== Rails 3 (edge) + Mongoid + RSpec + Steak app skeleton
+
+This is initial application with Rails 3, Mongoid, RSpec and Steak.
+Clone, run:
+
+    bundle install
+
+and enjoy.
+
+Run tests to check if the app starts properly, and Google still operates (which means there was no nuclear holocaust, which is a good thing):
+
+    rake spec
+
+If 1 test passes, you're done. Start creating your brand new Rails 3 app!
+
+TODO: Make a Rails template from this. (this will never happen).
+
+
