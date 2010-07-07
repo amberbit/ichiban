@@ -1,15 +1,22 @@
 en:
+  submit: Submit
   admin:
     admin_required: "Administrator rights required to access this area"
     sign_out: "Sign out"
     dashboard: "Dashboard"
     users: "Users"
+    new_user: "New user"
+    user:
+      cannot_create: "Could not create a user"
   activemodel:
     models:
       user: "User"
     attributes:
       user:
         picture: "Avatar"
+        name: "Name"
+        email: "Email"
+        password: "Password"
   attributes:
     email: "Email"
     name: "Name"

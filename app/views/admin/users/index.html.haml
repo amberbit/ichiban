@@ -1,10 +1,12 @@
-%table
+%table.admin-table
   %tr
     %th= t("activemodel.attributes.user.picture")
     %th= t("attributes.email")
     %th= t("attributes.name")
   - @users.each do |user|
     %tr
-      %td= image_tag user.picture.url(:small)
+      %td= image_tag user.picture.url(:small), width: "20px", height: "20px"
       %td= user.email
       %td= user.name
+
+= link_to t("admin.new_user"), new_admin_user_path

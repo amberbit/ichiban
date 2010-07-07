@@ -1,0 +1,15 @@
+- form_for [:admin, user], html: {class: "admin-form", multipart: true} do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.label :password
+    = f.password_field :password
+  %p
+    = f.label :picture
+    = f.file_field :picture
+  %p
+    = f.submit t("submit")

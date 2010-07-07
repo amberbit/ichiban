@@ -1,4 +1,8 @@
+html {
+  background-color: #aa0000; }
+
 body {
+  background-color: #aa0000;
   background-color: #aa0000;
   padding: 10px;
   font-size: 12px; }
@@ -51,3 +55,20 @@ header {
 #footer, #footer a, #footer a:visited, #footer a:hover {
   color: white;
   text-decoration: none; }
+
+.admin-table {
+  border-collapse: collapse;
+  width: 840px; }
+  .admin-table th {
+    padding: 0 5px;
+    text-align: left;
+    background-color: #ee8888; }
+  .admin-table td, .admin-table th {
+    border: 1px solid #aa0000;
+    vertical-align: top; }
+
+.admin-form label {
+  display: block; }
+
+.field_with_errors {
+  background-color: #ee8888; }

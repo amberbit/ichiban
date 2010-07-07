@@ -28,4 +28,18 @@ feature "Admin users management", %q{
     page.body.should include("john@doe.com")
     page.body.should include("jane@doe.com")
   end
+
+  scenario "Creating a new user" do
+    when_user_exists "john@doe.com", true
+    when_i_sign_in_as "john@doe.com"
+    visit "/admin"
+    click_link I18n.t("admin.users")
+    click_link I18n.t("admin.new_user")
+    fill_in I18n.t("activemodel.attributes.user.name"), with: "John Smith"
+    fill_in I18n.t("activemodel.attributes.user.email"), with: "john@smith.com"
+    fill_in I18n.t("activemodel.attributes.user.password"), with: "testtest"
+    attach_file I18n.t("activemodel.attributes.user.picture"), "#{Rails.root}/spec/fixtures/picture.jpg"
+    click_button I18n.t("submit")
+    User.find(:first, conditions: {email: "john@doe.com"}).should_not be_nil
+  end
 end
