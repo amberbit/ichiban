@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mongoid", ">= 2.0.0.beta9"
 gem "bson_ext", "1.0.1", require: nil
+gem "haml", "3.0.13"
 gem "devise", "1.1.rc2"
 gem "rspec", git: "git://github.com/dchelimsky/rspec.git", require: nil
 gem "rspec-rails", git: "git://github.com/dchelimsky/rspec-rails.git", require: nil

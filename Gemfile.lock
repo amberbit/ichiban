@@ -138,6 +138,8 @@ GEM
       rake (>= 0.8.7)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    haml (3.0.13)
+    haml (3.0.13)
     i18n (0.4.1)
     i18n (0.4.1)
     json_pure (1.4.3)
@@ -242,6 +244,7 @@ DEPENDENCIES
   bson_ext (= 1.0.1)
   capybara (= 0.3.9)
   devise (= 1.1.rc2)
+  haml (= 3.0.13)
   mongoid (>= 2.0.0.beta9)
   rails!
   rspec!
