@@ -10,6 +10,7 @@ class Article
   field :body_html, type: String
   field :extended_body_html, type: String
   field :published, type: Boolean, default: false
+  field :keywords, type: Array
   
   before_validation :process_content
 
@@ -18,6 +19,14 @@ class Article
   belongs_to_related :user
 
   validates_presence_of :user_id, :title, :slug, :body
+
+  def keywords_string=(some_string = "")
+    self.keywords = (some_string || "").split(/,( )*/).select {|el| el!=" " && el !=""}
+  end
+
+  def keywords_string
+    keywords.join(", ")
+  end
 
   private
 

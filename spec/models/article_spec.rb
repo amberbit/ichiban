@@ -31,6 +31,27 @@ describe Article do
     Article.new(valid_article_attributes.select{|k| k!= :user}).should_not be_valid
   end
 
+  it "should be possible to assign article keywords" do
+    a = Article.new(valid_article_attributes)
+    a.keywords = ["some", "keywords", "are here"]
+    a.save
+    a.keywords.should eql(["some", "keywords", "are here"])
+  end
+
+  it "should be possible to assign article keywords as string" do
+    a = Article.new(valid_article_attributes)
+    a.keywords_string = "some, keywords, are here"
+    a.save
+    a.keywords.should eql(["some", "keywords", "are here"])
+  end
+
+  it "should be possible to get keywords as string" do
+    a = Article.new(valid_article_attributes)
+    a.keywords_string = "some, keywords, are here"
+    a.save
+    a.keywords_string.should eql("some, keywords, are here")
+  end
+
   it "should be removed when user is being removed" do
     Article.create valid_article_attributes
     @user.destroy
@@ -90,6 +111,5 @@ describe Article, "content processing" do
 
   it "should recognize custom tag for embedding images"
 
-  it "should recognize custom tag for embedding videos"
-  
+  it "should recognize custom tag for embedding videos"  
 end
