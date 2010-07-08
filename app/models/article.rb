@@ -6,6 +6,9 @@ class Article
   field :title, type: String
   field :slug, type: String
   field :body, type: String
+  field :published, type: Boolean, default: false
+
+  attr_protected :published
 
   belongs_to_related :user
 

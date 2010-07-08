@@ -37,7 +37,41 @@ describe Article do
     Article.count.should eql(0)
   end
 
+  it "should pre-process body with given processor"
+
+  it "should pre-process extended body with given processor"
+
   it "should have date" do
     Article.create(valid_article_attributes).created_at.should be_kind_of(Time)
   end
+
+  it "should not be published by default" do
+    Article.create(valid_article_attributes).should_not be_published
+  end
+
+  it "should be possible to publish article" do
+    a = Article.create(valid_article_attributes)
+    a.published = true
+    a.save
+    a.should be_published
+  end
+
+  it "should not be possible to publish article with mass assignment" do
+    a = Article.create(valid_article_attributes)
+    a.update_attributes(published: true)
+    a.should_not be_published
+  end
+
+  it "should create initial version of document when creating an article"
+  
+  it "should save versions of document on each change"
+
+  it "should not change current version automatically"
+
+  it "should not be possible to assign current version with mass-assignment"
+
+  it "should be possible to change a published version when needed"
+
+  it "should store current version attributes in article and change them when changing version"
+  
 end
