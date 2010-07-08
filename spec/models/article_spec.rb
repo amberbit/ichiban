@@ -75,3 +75,15 @@ describe Article do
   it "should store current version attributes in article and change them when changing version"
   
 end
+
+describe Article, "content processing" do
+
+  it "should convert Markdown to HTML for article body"
+
+  it "should convert Markdown to HTML for article extended body"
+
+  it "should recognize custom tag for embedding images"
+
+  it "should recognize custom tag for embedding videos"
+
+end

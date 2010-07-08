@@ -7,6 +7,8 @@ gem "haml", "3.0.13"
 gem "devise", "1.1.rc2"
 gem "carrierwave", git: "git://github.com/jnicklas/carrierwave.git"
 gem "rmagick", "2.13.1", require: "RMagick"
+gem "rdiscount", "1.6.5"
+
 gem "rspec", "2.0.0.beta.15", require: nil
 gem "rspec-rails", "2.0.0.beta.15", require: nil
 gem "steak", git: "git://github.com/cavalle/steak.git", require: nil

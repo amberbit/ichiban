@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 nbproject/*
 public/uploads/*
+Gemfile.lock
