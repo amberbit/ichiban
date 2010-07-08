@@ -1,18 +1,18 @@
-== Rails 3 (edge) + Mongoid + RSpec + Steak app skeleton
+== Ichiban is yet another CMS/blogging platform for Rails
 
-This is initial application with Rails 3, Mongoid, RSpec and Steak.
-Clone, run:
+= Why? 
 
-    bundle install
+We wanted to use MongoDB for content storage and found existing CMSes are not suitable for this purpose.
 
-and enjoy.
+= Status
 
-Run tests to check if the app starts properly, and Google still operates (which means there was no nuclear holocaust, which is a good thing):
+This is heavy work in progress, not much works yet.
 
-    rake spec
+= License
 
-If 1 test passes, you're done. Start creating your brand new Rails 3 app!
+Licensed under the terms of MIT license.
 
-TODO: Make a Rails template from this. (this will never happen).
+= Copyright
 
+Hubert Łępicki, Wojciech Piekutowski, AmberBit
 
