@@ -15,7 +15,7 @@ describe Snippet do
   end
 
   it "should process content with markdown to html" do
-    Snippet.create(valid_snippet_attributes).content_html.should include("<h1>World!</h1>")
+    Snippet.create(valid_snippet_attributes).content_processed.should include("<h1>World!</h1>")
   end
 
   it "shoul have unique name" do

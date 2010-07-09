@@ -2,11 +2,11 @@
 
 %h1= @article.title
 
-= @article.body_html.html_safe
+= @article.body_processed.html_safe
 
 - unless @article.extended_body.blank?
   <hr/>
-  = @article.extended_body_html.html_safe
+  = @article.extended_body_processed.html_safe
 
 .clear
 = link_to t("edit"), [:edit, :admin, @article]

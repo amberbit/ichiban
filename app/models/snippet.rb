@@ -6,10 +6,8 @@ class Snippet
   include ContentProcessor
 
   field :name, type: String
-  field :content, type: String
-  field :content_html, type: String
+  process_content :content
 
   validates_presence_of :name, :content
   validates_uniqueness_of :name
-  process_content :content
 end

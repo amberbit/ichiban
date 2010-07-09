@@ -7,12 +7,15 @@ module ContentProcessor
 
   module ClassMethods
     def process_content *fields
+      fields.each do |f|
+        field "#{f}", type: String
+        field "#{f}_processed", type: String
+      end
+
       before_validation(
         Proc.new do |record|
           fields.each do |field|
-            if record.respond_to?("#{field}_html=") && record.respond_to?(field)
-              record.send("#{field}_html=", ContentProcessor.process(record.send field))
-            end
+            record.send("#{field}_processed=", ContentProcessor.process(record.send field))
           end
         end
       )

@@ -100,12 +100,12 @@ describe Article, "content processing" do
 
   it "should convert Markdown to HTML for article body" do
     a = Article.create(valid_article_attributes.merge({body: "# This is a header"}))
-    a.body_html.should eql("<h1>This is a header</h1>\n")
+    a.body_processed.should eql("<h1>This is a header</h1>\n")
   end
 
   it "should convert Markdown to HTML for article extended body" do
     a = Article.create(valid_article_attributes.merge({extended_body: "# This is a header"}))
-    a.extended_body_html.should eql("<h1>This is a header</h1>\n")
+    a.extended_body_processed.should eql("<h1>This is a header</h1>\n")
   end
 
   it "should recognize custom tag for embedding images"
