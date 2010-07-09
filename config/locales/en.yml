@@ -29,6 +29,7 @@ en:
     asset:
       cannot_create: "Could not create asset"
       cannot_update: "Could not update asset"
+      cannot_delete: "Could not delete this asset, it's being used by some articles or snippets"
       deleted: "Asset was removed"
       new: "New asset"
       edit: "Edit asset"

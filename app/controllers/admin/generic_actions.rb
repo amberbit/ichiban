@@ -30,8 +30,13 @@ module Admin::GenericActions
   end
 
   def destroy
-    @resource.destroy
-    redirect_to [:admin, resource_class.to_s.tableize.to_sym]
+    if @resource.destroy
+      flash[:notice] = I18n.t("admin.#{resource_name}.deleted")
+      redirect_to [:admin, resource_class.to_s.tableize.to_sym]
+    else
+      flash[:warning] = I18n.t("admin.#{resource_name}.cannot_delete")
+      redirect_to :back
+    end
   end
   
   def show; end

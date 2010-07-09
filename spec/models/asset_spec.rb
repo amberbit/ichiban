@@ -17,13 +17,25 @@ describe Asset do
   end
 
   it "should be possible to remove asset not used in articles and snippets" do
-    a = Asset.create
+    a = Asset.create valid_asset_attributes
     a.destroy
     Asset.count.should eql(0)
   end
 
-  it "should not be possible to remove asset used in article"
+  it "should not be possible to remove asset used in article as image" do
+    User.create! valid_user_attributes
+    a = Asset.create! valid_asset_attributes
+    Article.create! valid_article_attributes.merge({body: "image_asset##{a.id}"})
+    a.destroy
+    Asset.count.should eql(1)
+  end
 
-  it "should not be possible to remove asset used in snippet"
+  it "should not be possible to remove asset used in snippet as image" do
+    User.create! valid_user_attributes
+    s = Asset.create! valid_asset_attributes
+    Snippet.create! valid_snippet_attributes.merge({content: "image_asset##{s.id}"})
+    s.destroy
+    Asset.count.should eql(1)
+  end
 
 end
