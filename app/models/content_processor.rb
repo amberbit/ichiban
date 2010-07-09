@@ -4,7 +4,18 @@ module ContentProcessor
   extend ActiveSupport::Concern
 
   def self.process(text)
-    RDiscount.new(text || "", :smart, :filter_html).to_html
+    RDiscount.new(expand_image_tag(text || ""), :smart, :filter_html).to_html
+  end
+
+  def self.expand_image_tag(text)
+    return text.gsub(/image_asset\#(.*){24}/) do |match|
+      a = Asset.find(match.split("#").last)
+      if a
+        "![#{a.title}](#{a.file.url} \"#{a.title}\")"
+      else
+        ""
+      end
+    end
   end
 
   module ClassMethods
