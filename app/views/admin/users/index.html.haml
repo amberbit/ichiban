@@ -6,7 +6,7 @@
     %th= t("attributes.email")
     %th= t("attributes.name")
     %th
-  - @users.each do |user|
+  - @resources.each do |user|
     %tr
       %td= image_tag user.picture.url(:small), width: "20px", height: "20px"
       %td= user.email

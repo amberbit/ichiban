@@ -1,6 +1,6 @@
-%h1= @snippet.name
+%h1= @resource.name
 
-= @snippet.content_processed.html_safe
+= @resource.content_processed.html_safe
 
 .clear
-= link_to t("edit"), [:edit, :admin, @snippet]
+= link_to t("edit"), [:edit, :admin, @resource]

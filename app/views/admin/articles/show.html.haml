@@ -1,12 +1,12 @@
-= image_tag @article.user.picture.url(:medium), class: "article-preview-image"
+= image_tag @resource.user.picture.url(:medium), class: "article-preview-image"
 
-%h1= @article.title
+%h1= @resource.title
 
-= @article.body_processed.html_safe
+= @resource.body_processed.html_safe
 
-- unless @article.extended_body.blank?
+- unless @resource.extended_body.blank?
   <hr/>
-  = @article.extended_body_processed.html_safe
+  = @resource.extended_body_processed.html_safe
 
 .clear
-= link_to t("edit"), [:edit, :admin, @article]
+= link_to t("edit"), [:edit, :admin, @resource]

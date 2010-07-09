@@ -6,7 +6,7 @@
     %th= t("activemodel.attributes.article.published")
     %th= t("activemodel.attributes.article.user")
     %th
-  - @articles.each do |article|
+  - @resources.each do |article|
     %tr
       %td= article.title
       %td= article.published?
