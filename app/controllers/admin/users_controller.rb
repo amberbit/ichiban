@@ -50,5 +50,5 @@ class Admin::UsersController < Admin::BaseController
 
   protected
 
-  def find_user;  @user = User.find BSON::ObjectID(params[:id]); end
+  def find_user;  @user = User.find params[:id]; end
 end

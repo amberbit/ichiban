@@ -3,8 +3,7 @@
 module ModelWithKeywords
   extend ActiveSupport::Concern
   included do
-    field :keywords, type: Array
-
+    field :keywords, type: Array, default: []
   end
 
   def keywords_string=(some_string = "")

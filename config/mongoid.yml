@@ -1,5 +1,5 @@
 defaults: &defaults
-  use_object_ids: true
+  use_object_ids: false
   host: localhost
   # slaves:
   #   - host: slave1.local

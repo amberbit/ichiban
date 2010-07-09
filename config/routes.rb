@@ -16,6 +16,12 @@ Quizes::Application.routes.draw do |map|
 
   namespace :admin do
     resources :users
+    resources :articles do
+      member do
+        get :publish
+        get :unpublish
+      end
+    end
   end
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):

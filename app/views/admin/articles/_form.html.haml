@@ -1,0 +1,21 @@
+- form_for [:admin, article], html: {class: "admin-form"} do |f|
+  %p
+    = f.label :title
+    = f.text_field :title
+  %p
+    = f.label :slug
+    = f.text_field :slug
+  %p
+    = f.label :body
+    = f.text_area :body
+  %p
+    = f.label :extended_body
+    = f.text_area :extended_body
+  %p
+    = f.label :keywords_string
+    = f.text_field :keywords_string
+  %p
+    = f.label :user
+    = f.collection_select :user_id, User.all, :id, :name
+  %p
+    = f.submit t("submit")

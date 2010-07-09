@@ -2,10 +2,8 @@ require 'spec_helper'
 
 describe Article do
 
-  before :each do
-    @user = User.create! valid_user_attributes
-  end
-
+  before(:each) { @user = User.create! valid_user_attributes }
+  
   it "should be possible to create with user, title, slug and body" do
     Article.create! valid_article_attributes
   end
@@ -98,6 +96,7 @@ describe Article do
 end
 
 describe Article, "content processing" do
+  before(:each) { @user = User.create! valid_user_attributes }
 
   it "should convert Markdown to HTML for article body" do
     a = Article.create(valid_article_attributes.merge({body: "# This is a header"}))
@@ -112,4 +111,28 @@ describe Article, "content processing" do
   it "should recognize custom tag for embedding images"
 
   it "should recognize custom tag for embedding videos"  
+end
+
+describe Article, "edit permissions" do
+  before :each do
+    @user = User.create! valid_user_attributes
+    @article = Article.create valid_article_attributes
+  end
+  
+  it "should be possible to edit not published article by any user" do
+    @article.can_be_edited_by?(@user).should be_true
+  end
+
+  it "should not be possible to edit published article by normal users" do
+    @article.published = true
+    @article.save
+    @article.can_be_edited_by?(@user).should be_false
+  end
+  it "should be possible to edit published article by admin users" do
+    @article.published = true
+    @article.save
+    @user.admin = true
+    @user.save
+    @article.can_be_edited_by?(@user).should be_true
+  end
 end

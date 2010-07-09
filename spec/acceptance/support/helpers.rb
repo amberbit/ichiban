@@ -20,6 +20,14 @@ module HelperMethods
     end
     u
   end
+
+  def when_article_exists(title="some title")
+    slug = title.downcase.gsub(" ", "-")
+    body = "# Hello!"
+    extended_body = "## World!"
+    user = User.first
+    Article.create!(title: title, slug: slug, body: body, extended_body: extended_body, user: user)
+  end
   
 end
 

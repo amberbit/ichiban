@@ -20,6 +20,11 @@ class Article
   belongs_to_related :user
 
   validates_presence_of :user_id, :title, :slug, :body
+  validates_uniqueness_of :slug
+
+  def can_be_edited_by?(some_user)
+    (published == false) || some_user.admin?
+  end
 
   private
 

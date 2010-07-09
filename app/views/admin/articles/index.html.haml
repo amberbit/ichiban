@@ -1,0 +1,27 @@
+%h1= t("admin.articles")
+
+%table.admin-table
+  %tr
+    %th= t("activemodel.attributes.article.title")
+    %th= t("activemodel.attributes.article.published")
+    %th= t("activemodel.attributes.article.user")
+    %th
+  - @articles.each do |article|
+    %tr
+      %td= article.title
+      %td= article.published?
+      %td= article.user.name
+      %td
+        = link_to t("show"), [:admin, article]
+        - if article.can_be_edited_by?(current_user)
+          = link_to t("edit"), [:edit, :admin, article]
+        - if article.can_be_edited_by?(current_user)
+          = link_to t("delete"), [:admin, article], method: "delete"
+        - if current_user.admin?
+          - if !article.published?
+            = link_to t("admin.article.publish"), [:publish, :admin, article]
+          - else
+            = link_to t("admin.article.unpublish"), [:unpublish, :admin, article]
+
+
+= link_to t("admin.article.new"), [:new, :admin, :article]
