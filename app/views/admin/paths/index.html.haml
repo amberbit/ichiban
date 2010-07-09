@@ -1,0 +1,20 @@
+%h1= t("admin.paths")
+
+%table.admin-table
+  %tr
+    %th= t("activemodel.attributes.path.request_path")
+    %th= t("activemodel.attributes.path.priority")
+    %th= t("activemodel.attributes.path.title")
+    %th= t("activemodel.attributes.path.keywords_string")
+    %th
+  - @resources.each do |path|
+    %tr
+      %td= path.request_path
+      %td= path.priority
+      %td= path.title
+      %td= path.keywords_string
+      %td
+        = link_to t("edit"), [:edit, :admin, path]
+        = link_to t("delete"), [:admin, path], method: "delete"
+
+= link_to t("admin.path.new"), [:new, :admin, :path]

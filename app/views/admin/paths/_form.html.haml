@@ -1,0 +1,15 @@
+- form_for [:admin, path], html: {class: "admin-form", multipart: true} do |f|
+  %p
+    = f.label :request_path
+    = f.text_field :request_path
+  %p
+    = f.label :priority
+    = f.select :priority, (1..10).collect {|i| [i, i]}
+  %p
+    = f.label :title
+    = f.text_field :title
+  %p
+    = f.label :keywords_string
+    = f.text_field :keywords_string
+  %p
+    = f.submit t("submit")

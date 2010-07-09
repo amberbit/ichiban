@@ -39,10 +39,20 @@ en:
       deleted: "Snippet was removed"
       new: "New snippet"
       edit: "Edit snippet"
+    paths: "Paths"
+    path:
+      cannot_create: "Could not create path"
+      cannot_update: "Could not update path"
+      deleted: "Path was removed"
+      new: "New path"
+      edit: "Edit path"
   activemodel:
     models:
       user: "User"
       article: "Article"
+      asset: "Asset"
+      snippet: "Snippet"
+      path: "Path"
     attributes:
       user:
         picture: "Avatar"
@@ -64,6 +74,12 @@ en:
       snippet:
         name: "Name"
         content: "Content"
+      path:
+        request_path: "Path pattern"
+        title: "Title"
+        priority: "Priority"
+        keywords_string: "Keywords"
+        keywords: "Keywords"
   attributes:
     email: "Email"
     name: "Name"

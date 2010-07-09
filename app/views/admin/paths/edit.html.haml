@@ -1,0 +1,5 @@
+%h1= t("admin.path.edit")
+
+= render "form", path: @resource
+
+= link_to t("cancel"), [:admin, :paths]

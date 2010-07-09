@@ -38,6 +38,10 @@ module HelperMethods
   def when_asset_exists(title)
     Asset.create! title: title, file: File.new("#{Rails.root}/spec/fixtures/picture.jpg")
   end
+
+  def when_path_exists(request_path)
+    Path.create! request_path: request_path
+  end
 end
 
 Rspec.configuration.include(HelperMethods)

@@ -18,6 +18,7 @@ Quizes::Application.routes.draw do |map|
     resources :users
     resources :snippets
     resources :assets
+    resources :paths
     resources :articles do
       member do
         get :publish
