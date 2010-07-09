@@ -1,0 +1,6 @@
+%h1= @resource.title
+
+= image_tag @resource.file.url
+
+.clear
+= link_to t("edit"), [:edit, :admin, @resource]

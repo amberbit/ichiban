@@ -57,3 +57,7 @@ end
 def valid_snippet_attributes
   {name: "hello", content: "# World!"}
 end
+
+def valid_asset_attributes
+  {title: "Some asset", file: File.new("#{Rails.root}/spec/fixtures/picture.jpg")}
+end

@@ -32,7 +32,11 @@ module HelperMethods
   end
 
   def when_snippet_exists(name, content = "# Hello, World!")
-    Snippet.create(name: name, content: content)
+    Snippet.create! name: name, content: content
+  end
+
+  def when_asset_exists(title)
+    Asset.create! title: title, file: File.new("#{Rails.root}/spec/fixtures/picture.jpg")
   end
 end
 

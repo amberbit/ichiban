@@ -1,0 +1,17 @@
+%h1= t("admin.assets")
+
+%table.admin-table
+  %tr
+    %th= t("activemodel.attributes.asset.title")
+    %th= t("activemodel.attributes.asset.file")
+    %th
+  - @resources.each do |asset|
+    %tr
+      %td= image_tag asset.file.url(:thumb)
+      %td= asset.title
+      %td
+        = link_to t("show"), [:admin, asset]
+        = link_to t("edit"), [:edit, :admin, asset]
+        = link_to t("delete"), [:admin, asset], method: "delete"
+
+= link_to t("admin.asset.new"), [:new, :admin, :asset]

@@ -17,6 +17,7 @@ Quizes::Application.routes.draw do |map|
   namespace :admin do
     resources :users
     resources :snippets
+    resources :assets
     resources :articles do
       member do
         get :publish

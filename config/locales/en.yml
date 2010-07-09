@@ -25,6 +25,13 @@ en:
       edit: "Edit article"
       publish: "Publish"
       unpublish: "Unpublish"
+    assets: "Assets"
+    asset:
+      cannot_create: "Could not create asset"
+      cannot_update: "Could not update asset"
+      deleted: "Asset was removed"
+      new: "New asset"
+      edit: "Edit asset"
     snippets: "Snippets"
     snippet:
       cannot_create: "Could not create snippet"
@@ -51,6 +58,9 @@ en:
         keywords_string: Keywords
         user: Author
         published: Published?
+      asset:
+        title: "Title"
+        file: "File"
       snippet:
         name: "Name"
         content: "Content"

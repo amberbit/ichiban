@@ -1,0 +1,9 @@
+- form_for [:admin, asset], html: {class: "admin-form", multipart: true} do |f|
+  %p
+    = f.label :title
+    = f.text_field :title
+  %p
+    = f.label :file
+    = f.file_field :file
+  %p
+    = f.submit t("submit")

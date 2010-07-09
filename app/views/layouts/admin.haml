@@ -30,6 +30,7 @@
               - if current_user.admin?
                 %li= link_to t("admin.snippets"), admin_snippets_path
                 %li= link_to t("admin.users"), admin_users_path
+              %li= link_to t("admin.assets"), admin_assets_path
               %li= link_to t("admin.sign_out"), destroy_user_session_path
       #content
         = yield
