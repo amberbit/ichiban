@@ -44,7 +44,7 @@ feature "Admin snippet management", %q{
     click_link I18n.t("edit")
     fill_in I18n.t("activemodel.attributes.snippet.content"), with: "## Ah, snap!"
     click_button I18n.t("submit")
-    Snippet.first.content.should include("<h2>Ah, snap!</h2>")
+    Snippet.first.content_html.should include("<h2>Ah, snap!</h2>")
   end
   
   scenario "Removing existing snippet" do
