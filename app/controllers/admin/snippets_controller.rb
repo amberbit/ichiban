@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Admin::SnippetsController < Admin::BaseController
   before_filter :authenticate_admin!
   before_filter :find_snippet, except: [:new, :create, :index]

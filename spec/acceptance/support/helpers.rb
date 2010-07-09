@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module HelperMethods
   # Put here any helper method you need to be available in all your acceptance tests
 

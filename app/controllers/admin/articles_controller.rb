@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Admin::ArticlesController < Admin::BaseController
   before_filter :authenticate_admin!, only: [:publish, :unpublish]
   before_filter :find_article, except: [:new, :create, :index]

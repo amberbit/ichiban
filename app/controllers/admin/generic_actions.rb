@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Admin::GenericActions
   def index
     @resources = resource_class.find(:all, sort: "created_at desc")
