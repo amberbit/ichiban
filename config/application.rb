@@ -46,6 +46,11 @@ module Quizes
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
+    config.paths.app.models << "#{Rails.root}/ichiban_app/uploaders"
+    config.paths.app.models << "#{Rails.root}/ichiban_app/models"
+    config.paths.app.controllers << "#{Rails.root}/ichiban_app/controllers"
+    config.paths.app.views << "#{Rails.root}/ichiban_app/views"
+    config.paths.app.helpers << "#{Rails.root}/ichiban_app/helpers"
     # Configure sensitive parameters which will be filtered from the log file.
 #    config.filter_parameters += [:password]
     Haml::Template.options[:format] = :html5
