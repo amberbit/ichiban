@@ -51,3 +51,7 @@ end
 def valid_article_attributes
   {user: User.first, title: "Some article", body: "Some body", slug: "some-article"}
 end
+
+def valid_snippet_attributes
+  {name: "hello", content: "# World!"}
+end
