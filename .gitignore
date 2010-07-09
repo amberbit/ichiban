@@ -5,3 +5,4 @@ tmp/**/*
 nbproject/*
 public/uploads/*
 Gemfile.lock
+nohup.out
