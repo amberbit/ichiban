@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %meta{ :name => "csrf-token", :content => form_authenticity_token }
+    = csrf_meta_tag
     %title Ichiban CMS Admin Panel
     = stylesheet_link_tag "reset"
     = stylesheet_link_tag "admin"
@@ -28,6 +28,7 @@
               %li= link_to t("admin.dashboard"), admin_path
               %li= link_to t("admin.articles"), admin_articles_path
               - if current_user.admin?
+                %li= link_to t("admin.snippets"), admin_snippets_path
                 %li= link_to t("admin.users"), admin_users_path
               %li= link_to t("admin.sign_out"), destroy_user_session_path
       #content

@@ -28,7 +28,10 @@ module HelperMethods
     user = User.first
     Article.create!(title: title, slug: slug, body: body, extended_body: extended_body, user: user)
   end
-  
+
+  def when_snippet_exists(name, content = "# Hello, World!")
+    Snippet.create(name: name, content: content)
+  end
 end
 
 Rspec.configuration.include(HelperMethods)

@@ -1,0 +1,9 @@
+- form_for [:admin, snippet], html: {class: "admin-form"} do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :content
+    = f.text_area :content
+
+  = f.submit t("submit")

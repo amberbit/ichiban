@@ -25,6 +25,13 @@ en:
       edit: "Edit article"
       publish: "Publish"
       unpublish: "Unpublish"
+    snippets: "Snippets"
+    snippet:
+      cannot_create: "Could not create snippet"
+      cannot_update: "Could not update snippet"
+      deleted: "Snippet was removed"
+      new: "New snippet"
+      edit: "Edit snippet"
   activemodel:
     models:
       user: "User"
@@ -44,6 +51,9 @@ en:
         keywords_string: Keywords
         user: Author
         published: Published?
+      snippet:
+        name: "Name"
+        content: "Content"
   attributes:
     email: "Email"
     name: "Name"

@@ -1,0 +1,14 @@
+%h1= t("admin.snippets")
+
+%table.admin-table
+  %tr
+    %th= t("activemodel.attributes.snippet.name")
+    %th
+  - @snippets.each do |snippet|
+    %tr
+      %td= snippet.name
+      %td
+        = link_to t("edit"), [:edit, :admin, snippet]
+        = link_to t("delete"), [:admin, snippet], method: "delete"
+
+= link_to t("admin.snippet.new"), [:new, :admin, :snippet]

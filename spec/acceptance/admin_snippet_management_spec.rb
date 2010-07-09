@@ -57,9 +57,9 @@ feature "Admin snippet management", %q{
   end
 
   scenario "Not being able to access snippets as not administrator" do
-    when_user_exists "john@doe.com", true
+    when_user_exists "john@doe.com"
     when_i_sign_in_as "john@doe.com"
     visit "/admin/snippets"
-    current_path.should eql("/user/sign_in")
+    current_path.should eql("/admin")
   end
 end
