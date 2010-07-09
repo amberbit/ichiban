@@ -61,3 +61,7 @@ end
 def valid_asset_attributes
   {title: "Some asset", file: File.new("#{Rails.root}/spec/fixtures/picture.jpg")}
 end
+
+def valid_path_attributes
+  {request_path: "/something", priority: 1}
+end
