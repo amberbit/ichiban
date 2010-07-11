@@ -1,0 +1,8 @@
+defaults: &defaults
+  use_object_ids: false
+  host: localhost
+
+test:
+  <<: *defaults
+  database: ichiban_test
+
