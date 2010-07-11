@@ -55,7 +55,7 @@ GIT
       thor (~> 0.13.7)
 
 PATH
-  remote: /home/hubert/Projekty/amberbit_com/vendor/plugins/ichiban
+  remote: /home/hubert/Projekty/ichiban2
   specs:
     ichiban (0.0.1)
 
