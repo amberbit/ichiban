@@ -1,6 +1,6 @@
 tmp/*
-public/stylesheets/*
-public/javascripts/*
+public/stylesheets/*.css
+public/javascripts/*.js
 public/images/*
 public/uploads/*
 publis/system/*
