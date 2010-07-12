@@ -8,29 +8,96 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Hubert Lepicki"]
-  s.date = %q{2010-07-11}
-  s.email = %q{hubert.lepicki@amberbit.com}
+  s.date = %q{2010-07-12}
   s.extra_rdoc_files = [
     "README.markdown"
   ]
   s.files = [
-    "Gemfile",
-     "README.markdown",
-     "Rakefile",
-     "VERSION",
+    "app/controllers/admin/articles_controller.rb",
+     "app/controllers/admin/assets_controller.rb",
+     "app/controllers/admin/base_controller.rb",
+     "app/controllers/admin/dashboard_controller.rb",
+     "app/controllers/admin/generic_actions.rb",
+     "app/controllers/admin/paths_controller.rb",
+     "app/controllers/admin/snippets_controller.rb",
+     "app/controllers/admin/users_controller.rb",
+     "app/controllers/comments_controller.rb",
+     "app/helpers/admin/dashboard_helper.rb",
+     "app/helpers/application_helper.rb",
+     "app/helpers/paths_helper.rb",
+     "app/models/article.rb",
+     "app/models/asset.rb",
+     "app/models/content_processor.rb",
+     "app/models/model_with_keywords.rb",
+     "app/models/path.rb",
+     "app/models/snippet.rb",
+     "app/models/user.rb",
+     "app/uploaders/asset_file_uploader.rb",
+     "app/uploaders/picture_uploader.rb",
+     "app/views/admin/articles/_form.html.haml",
+     "app/views/admin/articles/edit.html.haml",
+     "app/views/admin/articles/index.html.haml",
+     "app/views/admin/articles/new.html.haml",
+     "app/views/admin/articles/show.html.haml",
+     "app/views/admin/assets/_form.html.haml",
+     "app/views/admin/assets/edit.html.haml",
+     "app/views/admin/assets/index.html.haml",
+     "app/views/admin/assets/new.html.haml",
+     "app/views/admin/assets/show.html.haml",
+     "app/views/admin/dashboard/index.html.haml",
+     "app/views/admin/paths/_form.html.haml",
+     "app/views/admin/paths/edit.html.haml",
+     "app/views/admin/paths/index.html.haml",
+     "app/views/admin/paths/new.html.haml",
+     "app/views/admin/snippets/_form.html.haml",
+     "app/views/admin/snippets/edit.html.haml",
+     "app/views/admin/snippets/index.html.haml",
+     "app/views/admin/snippets/new.html.haml",
+     "app/views/admin/snippets/show.html.haml",
+     "app/views/admin/users/_form.html.haml",
+     "app/views/admin/users/edit.html.haml",
+     "app/views/admin/users/index.html.haml",
+     "app/views/admin/users/new.html.haml",
+     "app/views/comments/_failure.js.erb",
+     "app/views/comments/_success.js.erb",
+     "app/views/comments/index.html.haml",
+     "app/views/comments/new.html.haml",
+     "app/views/layouts/_flash_messages.html.haml",
+     "app/views/layouts/admin.haml",
+     "app/views/layouts/admin/_flash_messages.html.haml",
+     "app/views/layouts/application.haml",
+     "config/initializers/devise.rb",
+     "config/locales/en.yml",
+     "config/routes.rb",
      "lib/ichiban.rb",
      "lib/ichiban/engine.rb",
-     "lib/tasks/rspec.rake",
-     "lib/tasks/steak.rake"
+     "tasks/ichiban.rake"
   ]
-  s.homepage = %q{http://amberbit.com}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Custom CMS with MongoDB and Mongoid}
+  s.summary = %q{Ichiban CMS as Rails Engine with MongoDB/Mongoid}
   s.test_files = [
-    "spec/testapp/config/boot.rb",
+    "spec/testapp/spec/acceptance/admin_paths_management_spec.rb",
+     "spec/testapp/spec/acceptance/user_sign_in_spec.rb",
+     "spec/testapp/spec/acceptance/admin_assets_management_spec.rb",
+     "spec/testapp/spec/acceptance/admin_users_management_spec.rb",
+     "spec/testapp/spec/acceptance/admin_article_management_spec.rb",
+     "spec/testapp/spec/acceptance/acceptance_helper.rb",
+     "spec/testapp/spec/acceptance/admin_snippet_management_spec.rb",
+     "spec/testapp/spec/acceptance/support/paths.rb",
+     "spec/testapp/spec/acceptance/support/helpers.rb",
+     "spec/testapp/spec/acceptance/sending_comments_spec.rb",
+     "spec/testapp/spec/helpers/paths_helper_spec.rb",
+     "spec/testapp/spec/spec_helper.rb",
+     "spec/testapp/spec/models/article_spec.rb",
+     "spec/testapp/spec/models/paths_spec.rb",
+     "spec/testapp/spec/models/snippet_spec.rb",
+     "spec/testapp/spec/models/comment_spec.rb",
+     "spec/testapp/spec/models/content_processor_spec.rb",
+     "spec/testapp/spec/models/user_spec.rb",
+     "spec/testapp/spec/models/asset_spec.rb",
+     "spec/testapp/config/boot.rb",
      "spec/testapp/config/environment.rb",
      "spec/testapp/config/application.rb",
      "spec/testapp/config/environments/development.rb",
@@ -46,24 +113,10 @@ Gem::Specification.new do |s|
      "spec/testapp/test/test_helper.rb",
      "spec/testapp/test/performance/browsing_test.rb",
      "spec/testapp/app/controllers/application_controller.rb",
+     "spec/testapp/app/controllers/home_controller.rb",
+     "spec/testapp/app/controllers/articles_controller.rb",
      "spec/testapp/app/helpers/application_helper.rb",
-     "spec/acceptance/admin_paths_management_spec.rb",
-     "spec/acceptance/user_sign_in_spec.rb",
-     "spec/acceptance/admin_assets_management_spec.rb",
-     "spec/acceptance/admin_users_management_spec.rb",
-     "spec/acceptance/admin_article_management_spec.rb",
-     "spec/acceptance/acceptance_helper.rb",
-     "spec/acceptance/admin_snippet_management_spec.rb",
-     "spec/acceptance/support/paths.rb",
-     "spec/acceptance/support/helpers.rb",
-     "spec/helpers/paths_helper_spec.rb",
-     "spec/spec_helper.rb",
-     "spec/models/article_spec.rb",
-     "spec/models/paths_spec.rb",
-     "spec/models/snippet_spec.rb",
-     "spec/models/content_processor_spec.rb",
-     "spec/models/user_spec.rb",
-     "spec/models/asset_spec.rb"
+     "spec/testapp/app/models/comment.rb"
   ]
 
   if s.respond_to? :specification_version then
