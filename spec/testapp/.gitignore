@@ -2,4 +2,7 @@ tmp/*
 public/stylesheets/*
 public/javascripts/*
 public/images/*
+public/uploads/*
+publis/system/*
+log/*
 Gemfile*
