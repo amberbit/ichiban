@@ -12,7 +12,7 @@ $("*[data-populate-with]").live("reload", loadElement);
 $(".comment-form").live("comment-success", function(event) {
   $(".comment-failure", this).hide();
   $(".comment-success", this).show();
-  $("input[type='text']", this).val("");
+  $("input[type='text'], textarea", this).val("");
   $("#comments_list_wrapper").trigger("reload");
 });
 
