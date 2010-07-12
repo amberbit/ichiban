@@ -2,3 +2,4 @@ tmp/*
 public/stylesheets/*
 public/javascripts/*
 public/images/*
+Gemfile*
