@@ -65,3 +65,7 @@ end
 def valid_path_attributes
   {request_path: "/something", priority: 1}
 end
+
+def valid_comment_attributes
+  {email: "a@b.com", name: "John Doe", content: "How are you doing?", path: "/"}
+end

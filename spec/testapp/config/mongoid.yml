@@ -6,3 +6,7 @@ test:
   <<: *defaults
   database: ichiban_test
 
+development:
+  <<: *defaults
+  database: ichiban_development
+

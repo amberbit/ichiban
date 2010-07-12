@@ -1,0 +1,17 @@
+- form_for @comment, remote: true, html: {class: "comment-form"} do |f|
+
+  %h4{class: "comment-success", style: "display: none"}= t("comments.success_message")
+  %h4{class: "comment-failure", style: "display: none"}= t("comments.failure_message")
+
+  = f.hidden_field :path
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.label :content
+    = f.text_field :content
+  %p
+    = f.submit t("send")
