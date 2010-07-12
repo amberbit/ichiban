@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module ApplicationHelper
+module IchibanHelper
   def render_snippet(name)
     if snippet = Snippet.first(conditions: {name: name})
       snippet.content_processed.html_safe
