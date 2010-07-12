@@ -12,6 +12,8 @@ Rails.application.routes.draw do |map|
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+  resources :comments
+
   match "admin" => "admin/dashboard#index"
 
   namespace :admin do
