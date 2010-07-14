@@ -3,9 +3,9 @@
 class PictureUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or ImageScience support
-       include CarrierWave::RMagick
-  #     include CarrierWave::ImageScience
-
+  #     include CarrierWave::RMagick
+  #include CarrierWave::ImageScience
+  include CarrierWave::MiniMagick
   # Choose what kind of storage to use for this uploader
   storage :file
   #     storage :s3

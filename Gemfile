@@ -2,11 +2,11 @@ source 'http://rubygems.org'
 
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mongoid", ">= 2.0.0.beta9"
-gem "bson_ext", "1.0.1", require: nil
+gem "bson_ext", "1.0.4", require: nil
 gem "haml", "3.0.13"
 gem "devise", "1.1.rc2"
 gem "carrierwave", git: "git://github.com/jnicklas/carrierwave.git"
-gem "rmagick", "2.13.1", require: "RMagick"
+gem "mini_magick", "1.3.1"
 gem "rdiscount", "1.6.5"
 
 gem "rspec", "2.0.0.beta.15", require: nil
