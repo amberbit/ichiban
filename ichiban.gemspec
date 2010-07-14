@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.date = %q{2010-07-12}
+  s.date = %q{2010-07-14}
   s.extra_rdoc_files = [
     "README.markdown"
   ]
@@ -23,10 +23,11 @@ Gem::Specification.new do |s|
      "app/controllers/admin/users_controller.rb",
      "app/controllers/comments_controller.rb",
      "app/helpers/admin/dashboard_helper.rb",
-     "app/helpers/application_helper.rb",
+     "app/helpers/ichiban_helper.rb",
      "app/helpers/paths_helper.rb",
      "app/models/article.rb",
      "app/models/asset.rb",
+     "app/models/comment.rb",
      "app/models/content_processor.rb",
      "app/models/model_with_keywords.rb",
      "app/models/path.rb",
@@ -115,8 +116,7 @@ Gem::Specification.new do |s|
      "spec/testapp/app/controllers/application_controller.rb",
      "spec/testapp/app/controllers/home_controller.rb",
      "spec/testapp/app/controllers/articles_controller.rb",
-     "spec/testapp/app/helpers/application_helper.rb",
-     "spec/testapp/app/models/comment.rb"
+     "spec/testapp/app/helpers/application_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
