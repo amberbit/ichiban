@@ -38,6 +38,12 @@ describe Article do
     a.keywords.should eql(["some", "keywords", "are here"])
   end
 
+  it "should be possible to assign article description" do
+    a = Article.new(valid_article_attributes.merge(description: "hi"))
+    a.save
+    a.description.should eql("hi")
+  end
+
   it "should be possible to assign article keywords as string" do
     a = Article.new(valid_article_attributes)
     a.keywords_string = "some, keywords, are here"

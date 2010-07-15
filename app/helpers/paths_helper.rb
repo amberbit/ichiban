@@ -25,4 +25,12 @@ module PathsHelper
       return nil
     end
   end
+
+  def description_for_path(path = request.path)
+    if found = recognize_path(path)
+      return found.description
+    else
+      return nil
+    end
+  end
 end

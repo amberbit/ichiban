@@ -8,11 +8,11 @@ module IchibanHelper
       "<!-- Snippet #{name} was not found! -->".html_safe
     end
   end
-  def comment_form(path: nil)
+  def comment_form(path = nil)
     div_populate('new_comment_wrapper', new_comment_path(path: path || request.path))
   end
 
-  def comments_list(path: nil)
+  def comments_list(path = nil)
     div_populate('comments_list_wrapper', comments_path(path: path || request.path))
   end
 
