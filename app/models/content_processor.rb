@@ -8,7 +8,7 @@ module ContentProcessor
   end
 
   def self.expand_image_tag(text)
-    return text.gsub(/image_asset\#(.*){24}/) do |match|
+    return text.gsub(/image_asset\#(.){24}/) do |match|
       a = Asset.find(match.split("#").last)
       if a
         "![#{a.title}](#{a.file.url} \"#{a.title}\")"
