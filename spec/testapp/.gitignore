@@ -1,8 +1,0 @@
-tmp/*
-public/stylesheets/*.css
-public/javascripts/*.js
-public/images/*
-public/uploads/*
-publis/system/*
-log/*
-Gemfile*
