@@ -30,9 +30,9 @@ Rspec.configure do |config|
   config.mock_with :rspec
 end
 
-def valid_user_attributes
+def valid_user_attributes(custom_attributes={})
   { name: "John Doe", email: "john@doe.com", password: "asdf1234",
-    picture: File.open(File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "picture.jpg"), "r")}
+    picture: File.open(File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "picture.jpg"), "r")}.merge(custom_attributes)
 end
 
 def valid_article_attributes

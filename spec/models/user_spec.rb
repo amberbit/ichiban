@@ -30,6 +30,13 @@ describe User do
     u.should_not be_admin
   end
 
+  it "should list all users who receive comment notification" do
+    user1 = User.create! valid_user_attributes
+    user2 = User.create! valid_user_attributes(receive_comment_notification: true, email: "a@b.com")
+
+    User.receive_comment_notification.size.should eql(1)
+  end
+
   it "should not become admin with multi-assignment" do
     u = User.create valid_user_attributes.merge(admin: true)
     u.should_not be_admin

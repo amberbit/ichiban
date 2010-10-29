@@ -10,4 +10,11 @@ class Comment
   field :path, type: String
   
   validates_presence_of :email, :name, :content, :path
+  after_create :notify_users
+
+  private
+
+  def notify_users
+    CommentNotifier.deliver_notify_users(self)
+  end
 end
