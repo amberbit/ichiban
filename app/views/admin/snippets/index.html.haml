@@ -1,5 +1,9 @@
 %h1= t("admin.snippets")
 
+= form_for admin_snippets_path, html: {method: :get} do
+  = text_field_tag :query, params[:query]
+  = submit_tag t('search')
+
 %table.admin-table
   %tr
     %th= t("activemodel.attributes.snippet.name")

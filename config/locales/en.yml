@@ -5,6 +5,7 @@ en:
   delete: Delete
   show: Show
   send: "Send!"
+  search: Search
   comments:
     success_message: "Thank you!"
     failure_message: "Please fill in all the fields and try again"
