@@ -7,7 +7,10 @@ class User
   include Mongoid::Timestamps
   field :name, type: String
   field :admin, type: Boolean, default: false
+  field :receive_comment_notification, type: Boolean, default: false
   attr_protected :admin
+  
+  scope :receive_comment_notification, where: {receive_comment_notification: true}
 
   validates_presence_of :name, :picture
 

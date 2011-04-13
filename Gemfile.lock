@@ -1,0 +1,185 @@
+GIT
+  remote: git://github.com/cavalle/steak.git
+  revision: 9a4d5002562d9713fe0012b2965692796706fde6
+  specs:
+    steak (1.0.0.rc.1)
+      rspec
+
+GIT
+  remote: git://github.com/rspec/rspec-core.git
+  revision: 56b0b11f9ae0d60120a1e1d91a60699c8580fcaf
+  specs:
+    rspec-core (2.1.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-expectations.git
+  revision: c9a303300706f559f6c865aa9c0b512fc4234095
+  specs:
+    rspec-expectations (2.1.0.pre)
+      diff-lcs (~> 1.1.2)
+
+GIT
+  remote: git://github.com/rspec/rspec-mocks.git
+  revision: 60846584e835239b463bcbbc97c983b33c45e74b
+  specs:
+    rspec-mocks (2.1.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-rails.git
+  revision: 49c87d5f0a1186a87e22d8b23d9bbb6e407546fd
+  specs:
+    rspec-rails (2.1.0.pre)
+      rspec (= 2.1.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec.git
+  revision: 4f292805110f55defded1838d5b59aa56c94ff0b
+  specs:
+    rspec (2.1.0.pre)
+      rspec-core (= 2.1.0.pre)
+      rspec-expectations (= 2.1.0.pre)
+      rspec-mocks (= 2.1.0.pre)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.1)
+      actionpack (= 3.0.1)
+      mail (~> 2.2.5)
+    actionpack (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4.1)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.12)
+      rack-test (~> 0.5.4)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.1)
+      activesupport (= 3.0.1)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
+      arel (~> 1.0.0)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
+    activesupport (3.0.1)
+    arel (1.0.1)
+      activesupport (~> 3.0.0)
+    bcrypt-ruby (2.1.2)
+    bson (1.1.1)
+    bson_ext (1.1.1)
+    builder (2.1.2)
+    capybara (0.3.9)
+      culerity (>= 0.2.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (>= 0.0.3)
+    carrierwave (0.5.0)
+      activesupport (~> 3.0.0)
+    cgi_multipart_eof_fix (2.5.0)
+    childprocess (0.1.3)
+      ffi (~> 0.6.3)
+    culerity (0.2.12)
+    daemons (1.0.10)
+    devise (1.1.3)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 0.10.7)
+    diff-lcs (1.1.2)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    fastthread (1.0.7)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    gem_plugin (0.2.3)
+    haml (3.0.22)
+    i18n (0.4.2)
+    json_pure (1.4.6)
+    mail (2.2.9)
+      activesupport (>= 2.3.6)
+      i18n (~> 0.4.1)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mini_magick (3.0)
+      subexec (~> 0.0.4)
+    mongo (1.0.9)
+      bson (>= 1.0.5)
+    mongoid (2.0.0.beta.19)
+      activemodel (~> 3.0)
+      mongo (= 1.0.9)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
+    nokogiri (1.4.3.1)
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.13)
+      rack (>= 1.0.0)
+    rack-test (0.5.6)
+      rack (>= 1.0)
+    rails (3.0.1)
+      actionmailer (= 3.0.1)
+      actionpack (= 3.0.1)
+      activerecord (= 3.0.1)
+      activeresource (= 3.0.1)
+      activesupport (= 3.0.1)
+      bundler (~> 1.0.0)
+      railties (= 3.0.1)
+    railties (3.0.1)
+      actionpack (= 3.0.1)
+      activesupport (= 3.0.1)
+      rake (>= 0.8.4)
+      thor (~> 0.14.0)
+    rake (0.8.7)
+    rdiscount (1.6.5)
+    rubyzip (0.9.4)
+    selenium-webdriver (0.0.29)
+      childprocess (>= 0.0.7)
+      ffi (~> 0.6.3)
+      json_pure
+      rubyzip
+    subexec (0.0.4)
+    thor (0.14.3)
+    timecop (0.3.5)
+    treetop (1.4.8)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.23)
+    warden (0.10.7)
+      rack (>= 1.0.0)
+    will_paginate (3.0.pre2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext (= 1.1.1)
+  capybara (= 0.3.9)
+  carrierwave (= 0.5.0)
+  cgi_multipart_eof_fix
+  devise (= 1.1.3)
+  diff-lcs (= 1.1.2)
+  fastthread
+  haml (= 3.0.22)
+  mini_magick (= 3.0)
+  mongoid (>= 2.0.0.beta.19)
+  mongrel (= 1.2.0.pre2)
+  rails (= 3.0.1)
+  rdiscount (= 1.6.5)
+  rspec!
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  steak!
+  timecop (= 0.3.5)

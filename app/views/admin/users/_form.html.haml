@@ -12,4 +12,7 @@
     = f.label :picture
     = f.file_field :picture
   %p
+    = f.label :receive_comment_notification
+    = f.check_box :receive_comment_notification
+  %p
     = f.submit t("submit")
